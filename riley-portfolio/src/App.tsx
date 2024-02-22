@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
-import Home from './components/home/home';
+import About from './components/about/about';
 import SwProjects from './components/swProjects/swProjects';
 import HwProjects from './components/hwProjects/hwProjects';
 import Resume from './components/resume/resume';
@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Navbar />
       <div className="content">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<About />} />
           <Route path="/software" element={<SwProjects />} />
           <Route path="/hardware" element={<HwProjects />} />
           <Route path="/resume" element={<Resume />} />
