@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--primary-color);
+    height: 50px;
+}
+
+.navLink:hover{
+    transform: translateY(-5px);
+
+}
+
+.navLink {
+    color: var(--light-text-color);
+    text-decoration: none;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}

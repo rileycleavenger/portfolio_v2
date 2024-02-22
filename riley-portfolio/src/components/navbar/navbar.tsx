@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './navbar.css';
+import '../../variables.css';
 
 const Navbar: React.FC = () => {
   return (
     <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/hw_projects">Hardware Projects</Link></li>
-        <li><Link to="/sw_projects">Software Projects</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
-        <li><Link to="/contact">Contact Me</Link></li>
-      </ul>
+        <Link to="/" className='navLink'>About Me</Link>
+        <Link to="/hardware" className='navLink'>Hardware Projects</Link>
+        <Link to="/software" className='navLink'>Software Projects</Link>
+        <Link to="/resume" className='navLink'>Resume</Link>
+        <Link to="/contact" className='navLink'>Contact Me</Link>
     </nav>
   );
 };
