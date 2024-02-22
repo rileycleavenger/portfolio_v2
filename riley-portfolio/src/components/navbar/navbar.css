@@ -7,7 +7,7 @@ nav{
     width: 100%;
     z-index: 1;
     background-color: var(--primary-color);
-    height: 50px;
+    height: 55px;
 }
 
 .navLink:hover{
@@ -20,5 +20,5 @@ nav{
     text-decoration: none;
     padding: 10px;
     transition: transform 0.3s ease;
-    font-size: 18px;
+    font-size: 20px;
 }
