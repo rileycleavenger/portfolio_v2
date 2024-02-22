@@ -1,9 +1,11 @@
 import React from 'react';
 import './about.css';
 import { FaJsSquare, FaPython, FaReact, FaAngular, FaHtml5, FaCss3Alt, FaGithub, FaJava, FaNodeJs, FaLinkedin } from 'react-icons/fa';
-import { DiJavascript1, DiRust, DiVisualstudio, DiLinux } from 'react-icons/di';
-import { SiCplusplus, SiCsharp, SiMysql, SiFlask, SiVercel, SiMicrosoftazure, SiRaspberrypi, SiJirasoftware, SiFirebase, SiJupyter, SiPandas, SiNumpy, SiDocker, SiSelenium , SiGooglecloud } from 'react-icons/si';
-import { BiLogoTypescript, BiLogoGoLang  } from "react-icons/bi";
+import { DiRust, DiVisualstudio, DiLinux } from 'react-icons/di';
+import { SiCplusplus, SiCsharp, SiMysql, SiFlask, SiVercel, SiMicrosoftazure, SiRaspberrypi, SiJirasoftware, SiFirebase, SiJupyter, SiPandas, SiNumpy, SiDocker, SiSelenium , SiGooglecloud, SiC } from 'react-icons/si';
+import { BiLogoTypescript, BiLogoGoLang, BiLogoUnity  } from "react-icons/bi";
+import { IoHardwareChipSharp } from "react-icons/io5";
+import { GiProcessor } from "react-icons/gi";
 
 const About: React.FC = () => {
 
@@ -34,68 +36,74 @@ const About: React.FC = () => {
       <div className="icons-container">
         <div className="scrolling-icons">
           <div className='icons'>
-            <FaJsSquare className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/JavaScript')} />
-            <FaPython className="moving-icon" onClick={() => navigate('https://www.python.org/doc/')} />
-            <FaReact className="moving-icon" onClick={() => navigate('https://reactjs.org/')} />
-            <FaAngular className="moving-icon" onClick={() => navigate('https://angular.io/docs')} />
-            <FaHtml5 className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/HTML')} />
-            <FaCss3Alt className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/CSS')} />
-            <FaGithub className="moving-icon" onClick={() => navigate('https://github.com/')} />
-            <FaJava className="moving-icon" onClick={() => navigate('https://docs.oracle.com/en/java/')} />
-            <FaNodeJs className="moving-icon" onClick={() => navigate('https://nodejs.org/en/docs/')} />
-            <DiJavascript1 className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/JavaScript')} />
-            <BiLogoTypescript className="moving-icon" onClick={() => navigate('https://www.typescriptlang.org/docs/')} />
-            <SiFirebase className="moving-icon" onClick={() => navigate('https://firebase.google.com/docs')} />
-            <DiRust className="moving-icon" onClick={() => navigate('https://www.rust-lang.org/learn')} />
-            <DiVisualstudio className="moving-icon" onClick={() => navigate('https://code.visualstudio.com/docs')} />
-            <SiMicrosoftazure className="moving-icon" onClick={() => navigate('https://docs.microsoft.com/en-us/azure/?product=featured')} />
+            <SiC className='moving-icon' onClick={() => navigate('https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170')} />
             <SiCplusplus className="moving-icon" onClick={() => navigate('https://www.cplusplus.com/doc/tutorial/')} />
             <SiCsharp className="moving-icon" onClick={() => navigate('https://docs.microsoft.com/en-us/dotnet/csharp/')} />
+            <FaJava className="moving-icon" onClick={() => navigate('https://docs.oracle.com/en/java/')} />
+            <DiRust className="moving-icon" onClick={() => navigate('https://www.rust-lang.org/learn')} />
+            <FaPython className="moving-icon" onClick={() => navigate('https://www.python.org/doc/')} />
             <BiLogoGoLang className="moving-icon" onClick={() => navigate('https://golang.org/doc/')} />
+            <FaJsSquare className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/JavaScript')} />
+            <BiLogoTypescript className="moving-icon" onClick={() => navigate('https://www.typescriptlang.org/docs/')} />
+            <FaHtml5 className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/HTML')} />
+            <FaCss3Alt className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/CSS')} />
+            <FaReact className="moving-icon" onClick={() => navigate('https://reactjs.org/')} />
+            <FaAngular className="moving-icon" onClick={() => navigate('https://angular.io/docs')} />
             <SiMysql className="moving-icon" onClick={() => navigate('https://dev.mysql.com/doc/')} />
-            <SiFlask className="moving-icon" onClick={() => navigate('https://flask.palletsprojects.com/en/2.0.x/')} />
+            <SiDocker className="moving-icon" onClick={() => navigate('https://docs.docker.com/')} />
+            <FaNodeJs className="moving-icon" onClick={() => navigate('https://nodejs.org/en/docs/')} />
+            <SiGooglecloud className="moving-icon" onClick={() => navigate('https://cloud.google.com/docs')} />
+            <SiFirebase className="moving-icon" onClick={() => navigate('https://firebase.google.com/docs')} />
+            <SiMicrosoftazure className="moving-icon" onClick={() => navigate('https://docs.microsoft.com/en-us/azure/?product=featured')} />
             <SiVercel className="moving-icon" onClick={() => navigate('https://vercel.com/docs')} />
-            <SiRaspberrypi className="moving-icon" onClick={() => navigate('https://www.raspberrypi.org/documentation/')} />
-            <SiJirasoftware className="moving-icon" onClick={() => navigate('https://www.atlassian.com/software/jira/guides')} />
-            <DiLinux className="moving-icon" onClick={() => navigate('https://www.linux.org/pages/download/')} />
+            <SiFlask className="moving-icon" onClick={() => navigate('https://flask.palletsprojects.com/en/2.0.x/')} />
             <SiJupyter className="moving-icon" onClick={() => navigate('https://jupyter.org/documentation')} />
             <SiPandas className="moving-icon" onClick={() => navigate('https://pandas.pydata.org/docs/')} />
             <SiNumpy className="moving-icon" onClick={() => navigate('https://numpy.org/doc/')} />
-            <SiDocker className="moving-icon" onClick={() => navigate('https://docs.docker.com/')} />
             <SiSelenium className="moving-icon" onClick={() => navigate('https://www.selenium.dev/documentation/en/')} />
-            <SiGooglecloud className="moving-icon" onClick={() => navigate('https://cloud.google.com/docs')} />
+            <SiRaspberrypi className="moving-icon" onClick={() => navigate('https://www.raspberrypi.org/documentation/')} />
+            <DiLinux className="moving-icon" onClick={() => navigate('https://www.linux.org/pages/download/')} />
+            <BiLogoUnity className="moving-icon" onClick={() => navigate('https://docs.unity3d.com/Manual/index.html')} />
+            <IoHardwareChipSharp className="moving-icon" onClick={() => navigate('https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html')} />
+            <GiProcessor className="moving-icon" onClick={() => navigate('https://www.altium.com/altium-designer')} />
+            <FaGithub className="moving-icon" onClick={() => navigate('https://github.com/')} />
+            <DiVisualstudio className="moving-icon" onClick={() => navigate('https://code.visualstudio.com/docs')} />
+            <SiJirasoftware className="moving-icon" onClick={() => navigate('https://www.atlassian.com/software/jira/guides')} />
           </div>
           <div className='icons'>
-            <FaJsSquare className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/JavaScript')} />
-            <FaPython className="moving-icon" onClick={() => navigate('https://www.python.org/doc/')} />
-            <FaReact className="moving-icon" onClick={() => navigate('https://reactjs.org/')} />
-            <FaAngular className="moving-icon" onClick={() => navigate('https://angular.io/docs')} />
-            <FaHtml5 className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/HTML')} />
-            <FaCss3Alt className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/CSS')} />
-            <FaGithub className="moving-icon" onClick={() => navigate('https://github.com/')} />
-            <FaJava className="moving-icon" onClick={() => navigate('https://docs.oracle.com/en/java/')} />
-            <FaNodeJs className="moving-icon" onClick={() => navigate('https://nodejs.org/en/docs/')} />
-            <DiJavascript1 className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/JavaScript')} />
-            <BiLogoTypescript className="moving-icon" onClick={() => navigate('https://www.typescriptlang.org/docs/')} />
-            <SiFirebase className="moving-icon" onClick={() => navigate('https://firebase.google.com/docs')} />
-            <DiRust className="moving-icon" onClick={() => navigate('https://www.rust-lang.org/learn')} />
-            <DiVisualstudio className="moving-icon" onClick={() => navigate('https://code.visualstudio.com/docs')} />
-            <SiMicrosoftazure className="moving-icon" onClick={() => navigate('https://docs.microsoft.com/en-us/azure/?product=featured')} />
+            <SiC className='moving-icon' onClick={() => navigate('https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170')} />
             <SiCplusplus className="moving-icon" onClick={() => navigate('https://www.cplusplus.com/doc/tutorial/')} />
             <SiCsharp className="moving-icon" onClick={() => navigate('https://docs.microsoft.com/en-us/dotnet/csharp/')} />
+            <FaJava className="moving-icon" onClick={() => navigate('https://docs.oracle.com/en/java/')} />
+            <DiRust className="moving-icon" onClick={() => navigate('https://www.rust-lang.org/learn')} />
+            <FaPython className="moving-icon" onClick={() => navigate('https://www.python.org/doc/')} />
             <BiLogoGoLang className="moving-icon" onClick={() => navigate('https://golang.org/doc/')} />
+            <FaJsSquare className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/JavaScript')} />
+            <BiLogoTypescript className="moving-icon" onClick={() => navigate('https://www.typescriptlang.org/docs/')} />
+            <FaHtml5 className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/HTML')} />
+            <FaCss3Alt className="moving-icon" onClick={() => navigate('https://developer.mozilla.org/en-US/docs/Web/CSS')} />
+            <FaReact className="moving-icon" onClick={() => navigate('https://reactjs.org/')} />
+            <FaAngular className="moving-icon" onClick={() => navigate('https://angular.io/docs')} />
             <SiMysql className="moving-icon" onClick={() => navigate('https://dev.mysql.com/doc/')} />
-            <SiFlask className="moving-icon" onClick={() => navigate('https://flask.palletsprojects.com/en/2.0.x/')} />
+            <SiDocker className="moving-icon" onClick={() => navigate('https://docs.docker.com/')} />
+            <FaNodeJs className="moving-icon" onClick={() => navigate('https://nodejs.org/en/docs/')} />
+            <SiGooglecloud className="moving-icon" onClick={() => navigate('https://cloud.google.com/docs')} />
+            <SiFirebase className="moving-icon" onClick={() => navigate('https://firebase.google.com/docs')} />
+            <SiMicrosoftazure className="moving-icon" onClick={() => navigate('https://docs.microsoft.com/en-us/azure/?product=featured')} />
             <SiVercel className="moving-icon" onClick={() => navigate('https://vercel.com/docs')} />
-            <SiRaspberrypi className="moving-icon" onClick={() => navigate('https://www.raspberrypi.org/documentation/')} />
-            <SiJirasoftware className="moving-icon" onClick={() => navigate('https://www.atlassian.com/software/jira/guides')} />
-            <DiLinux className="moving-icon" onClick={() => navigate('https://www.linux.org/pages/download/')} />
+            <SiFlask className="moving-icon" onClick={() => navigate('https://flask.palletsprojects.com/en/2.0.x/')} />
             <SiJupyter className="moving-icon" onClick={() => navigate('https://jupyter.org/documentation')} />
             <SiPandas className="moving-icon" onClick={() => navigate('https://pandas.pydata.org/docs/')} />
             <SiNumpy className="moving-icon" onClick={() => navigate('https://numpy.org/doc/')} />
-            <SiDocker className="moving-icon" onClick={() => navigate('https://docs.docker.com/')} />
             <SiSelenium className="moving-icon" onClick={() => navigate('https://www.selenium.dev/documentation/en/')} />
-            <SiGooglecloud className="moving-icon" onClick={() => navigate('https://cloud.google.com/docs')} />
+            <SiRaspberrypi className="moving-icon" onClick={() => navigate('https://www.raspberrypi.org/documentation/')} />
+            <DiLinux className="moving-icon" onClick={() => navigate('https://www.linux.org/pages/download/')} />
+            <BiLogoUnity className="moving-icon" onClick={() => navigate('https://docs.unity3d.com/Manual/index.html')} />
+            <IoHardwareChipSharp className="moving-icon" onClick={() => navigate('https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html')} />
+            <GiProcessor className="moving-icon" onClick={() => navigate('https://www.altium.com/altium-designer')} />
+            <FaGithub className="moving-icon" onClick={() => navigate('https://github.com/')} />
+            <DiVisualstudio className="moving-icon" onClick={() => navigate('https://code.visualstudio.com/docs')} />
+            <SiJirasoftware className="moving-icon" onClick={() => navigate('https://www.atlassian.com/software/jira/guides')} />
           </div>
         </div>
       </div>
