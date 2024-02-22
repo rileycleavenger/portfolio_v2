@@ -1,9 +1,12 @@
 .content{
   padding: 10px;
   padding-top: 50px;
+  height: calc(100vh - 60px);
 }
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: var(--background-color);
   color: var(--dark-text-color);
+  height: 100vh;
+  width: 100vw;
 }
