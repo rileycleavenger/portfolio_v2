@@ -1,0 +1,23 @@
+.card-front, .card-back {
+    width: 400px; 
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    margin: 20px;
+    box-shadow: 0 0 10px 0 var(--dark-text-color);
+}
+
+.card-front img{
+    width: 100%;
+    height: auto;
+}
+
+.swProjects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    color: var(--light-text-color);
+}
