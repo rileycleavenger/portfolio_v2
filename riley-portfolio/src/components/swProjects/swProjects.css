@@ -1,6 +1,6 @@
 .card-front, .card-back {
-    width: 400px; 
-    height: 330px;
+    width: 450px; 
+    height: 350px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -30,6 +30,8 @@
     height: 200px;
     border-radius: 5px;
     transition: 0.3s ease;
+    background-image: linear-gradient(to right, var(--tertiary-color), var(--primary-color));
+    padding: 10px;
 }
 
 .card-front img:hover {
@@ -55,7 +57,9 @@
     flex-wrap: wrap;
     width: 100%;
     color: var(--light-text-color);
+    justify-content: space-evenly;
 }
+
 
 .description-text{
     text-align: center;
