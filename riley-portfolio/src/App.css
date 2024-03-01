@@ -1,6 +1,7 @@
 .content{
   padding-top: 55px;
   height: calc(100vh - 65px);
+  overflow-y: auto;
 }
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
@@ -8,5 +9,4 @@ body {
   color: var(--dark-text-color);
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
 }
