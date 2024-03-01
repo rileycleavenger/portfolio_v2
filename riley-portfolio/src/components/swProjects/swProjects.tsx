@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import { Project } from '../../types';
 import './swProjects.css';
-import { gatorPathTrackerImage, mealDealzImage } from '../../assets';
+import { gatorPathTrackerImage, mealDealzImage, modernJukeboxImage, huffmanTreeEncoderImage, goodEatsImage, webDriverDockerImage, userspaceFilesystemImage } from '../../assets';
 import { FaJsSquare, FaPython, FaReact, FaAngular, FaHtml5, FaCss3Alt, FaGithub, FaJava, FaNodeJs, FaLinkedin } from 'react-icons/fa';
 import { DiRust, DiVisualstudio, DiLinux } from 'react-icons/di';
 import { SiCplusplus, SiCsharp, SiMysql, SiFlask, SiVercel, SiMicrosoftazure, SiRaspberrypi, SiJirasoftware, SiFirebase, SiJupyter, SiPandas, SiNumpy, SiDocker, SiSelenium , SiGooglecloud, SiC } from 'react-icons/si';
@@ -20,56 +20,49 @@ const SwProjects: React.FC = () => {
       imagePath: gatorPathTrackerImage,
       description: 'GatorPathTracker is an all-in-one scheduling planning application built for University of Florida students. This application uses a custom API made with Selenium, Docker, Flask, and Google Cloud to return the most updated course data. The application also offers ratings webscraped from a variety of popular course rating websites, as well as ratings determined through NLP done on discussion regarding specific courses. The webapp itself was developed within the Angular framework and is hosted through Firebase.',
       link: 'https://gatorpathtracker.com',
-      technologiesUsed: ['Angular', 'TypeScript', 'HTML/CSS', 'Python', 'Realtime JSON Database', 'Firebase', 'Selenium', 'Docker', 'Flask', 'Google Cloud', 'ChatGPT API'],
-    },
-    {
-      name: 'MealDealz',
-      imagePath: '/../../assets/mealdealz.png',
-      description: '',
-      link: '',
-      technologiesUsed: [],
+      technologiesUsed: ['Angular', 'TypeScript', 'Python', 'Realtime JSON Database', 'Firebase', 'Selenium', 'Docker', 'Flask', 'Google Cloud', 'ChatGPT API'],
     },
     {
       name: 'The Modern Jukebox',
-      imagePath: '/../../assets/modernjukebox.png',
-      description: '',
-      link: '',
-      technologiesUsed: [],
+      imagePath: modernJukeboxImage,
+      description: 'The Modern Jukebox was developed to solve a common problem when hanging out with friends or coworkers, that only one person has access to change the music. The solution is a Raspberry Pi controlled by a React webapp. This application allows one user to “Create a Session” by signing into Spotify, then other users to “Join a Session” to queue songs to the device. Users joining the session don’t need a Spotify login, effectively allowing anyone with the session ID to queue songs and control the playback.',
+      link: 'https://the-modern-jukebox-react-app.vercel.app/',
+      technologiesUsed: ['React', 'TypeScript', 'Node.js', 'Python', 'C++', 'Raspberry Pi', 'Spotify API', 'Vercel'],
     },
     {
-      name: 'Web Driver Docker Container',
-      imagePath: '',
-      description: '',
-      link: '',
-      technologiesUsed: [],
+      name: 'MealDealz',
+      imagePath: mealDealzImage,
+      description: 'For this webapp I collaborated on a team using agile workflow to deploy an app that streamlines cooking and grocery shopping. Specifically, I developed a custom RESTful API in Golang which concurrently performs basic computation as well as utilizes essential HTTP methods to interface with a Microsoft Azure-hosted SQL server and database. I also wrote Python scripts to scrape weekly grocery sales from various chain grocery store websites, then store the gathered data in a SQL server.',
+      link: 'https://github.com/TylerMetz/Saucier720',
+      technologiesUsed: ['Angular', 'TypeScript', 'Go', 'Python', 'MySQL', 'Azure', 'Selenium'],
     },
     {
-      name: 'Memory Manager',
-      imagePath: '',
-      description: '',
-      link: '',
-      technologiesUsed: [],
+      name: 'Web Driver Docker',
+      imagePath: webDriverDockerImage,
+      description: 'I created this for developers looking to use Selenium\'s web driver to web scrape within a Docker. It is very useful for automating web scraping tasks using an external scheduler. The example provided in app.py allows for HTTP GET requests to be made to <insert docker url>/<insert website to scrape url> and returns a text file with the desired page\'s source code. Ideally this setup will just serve as an example for anyone looking to utlize Selenium and Docker in their webscraping processes.',
+      link: 'https://github.com/rileycleavenger/SeleniumWebScraper-Docker',
+      technologiesUsed: ['Python', 'Docker', 'Selenium', 'Flask'],
     },
     {
       name: 'Userspace Filesystem',
-      imagePath: '',
-      description: '',
+      imagePath: userspaceFilesystemImage,
+      description:  'For this project I developed a library to read and write to WAD files, then implement a userspace daemon, then test it by mounting and unmounting directories. For the libWad library I implemented several functions with the purpose of being able to treat a WAD file as an actual file directory system. I implemented three basic data structures to keep track of the files in the Wad file, a n-ary tree, a map to keep track of each node\'s filepath, then a map to keep track of folder end nodes.',
       link: '',
-      technologiesUsed: [],
+      technologiesUsed: ['C++', 'C', 'Linux'],
     },
     {
       name: 'The Good Eats',
-      imagePath: '',
-      description: '',
-      link: '',
-      technologiesUsed: [],
+      imagePath: goodEatsImage,
+      description: 'This program was developed to encourage support of local restaurants, and to stay away from chains. It pulls from a data set of 700,000 restaurants in the US and returns only non-chain restaurants in your area based on either latitude/longitude or state/country. This was implemented using both a hashmap and hashset, and the runtimes can be displayed in the program as well to compare performance.',
+      link: 'https://github.com/rileycleavenger/TheGoodEats',
+      technologiesUsed: ['C++'],
     },
     {
       name: 'Huffman Tree Encoder',
-      imagePath: '',
-      description: '',
-      link: '',
-      technologiesUsed: [],
+      imagePath: huffmanTreeEncoderImage,
+      description: 'I developed this class to compress txt files using the Huffman tree encoding algorithm through the implementation of a priority queue. The conversion of a txt file to a string occurs in the main.cpp file. The huffman tree class itself compresses a string which is passed through the constructor. I decided to develop the class around a string input for potential outside use and optimization beyond just txt files. Furthermore, it acts as a better proof of concept for the algorithm itself.',
+      link: 'https://github.com/rileycleavenger/Huffman-Tree-Encoder',
+      technologiesUsed: ['C++'],
     },
   ];
 
