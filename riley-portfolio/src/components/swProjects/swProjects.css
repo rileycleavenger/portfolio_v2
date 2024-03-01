@@ -1,17 +1,47 @@
 .card-front, .card-back {
     width: 400px; 
-    height: 300px;
+    height: 330px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     background-color: var(--secondary-color);
     margin: 20px;
     box-shadow: 0 0 10px 0 var(--dark-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-front:hover, .card-back:hover{
+    box-shadow: 0 0 20px 0 var(--dark-text-color);
+}
+
+.card-front-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .card-front img{
     width: 100%;
     height: auto;
+    border-radius: 10px;
+}
+
+.card-front a{
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.card-front a:hover{
+    color: var(--dark-text-color);
+    transition: 0.3s ease;
 }
 
 .swProjects{
@@ -20,4 +50,36 @@
     flex-wrap: wrap;
     width: 100%;
     color: var(--light-text-color);
+}
+
+.description-text{
+    text-align: center;
+    font-size: 18px;
+    color: var(--light-text-color);
+    line-height: 1.25;
+    padding-top: 30px;
+}
+
+.tech-icon-wrapper{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.tech-icon{
+    width: 30px;
+    height: 30px;
+    color: var(--primary-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.tech-icon:hover{
+    transform: translateY(-5px);
+    color: var(--light-text-color);
+}
+
+.card-back{
+    justify-content: space-between;
 }
