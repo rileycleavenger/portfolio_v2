@@ -152,7 +152,13 @@ const SwProjects: React.FC = () => {
         <ReactCardFlip isFlipped={isFlipped[index] || false} flipDirection="horizontal" key={index}>
           <div title="click to flip" className="card-front" onClick={() => handleClick(index)}>
             <div className="card-front-top">
-              <a title="click to visit the project" href={project.link} target="_blank">{project.name}</a>
+              {project.link ? (
+                <a title="click to visit the project" href={project.link} target="_blank">
+                  {project.name}
+                </a>
+              ) : (
+                <a onClick={() => alert("This is a private project, there is no available link or repository available.")}>{project.name}</a>
+              )}
               <img src={project.imagePath} />
             </div>
             <div className="tech-icon-wrapper">{project.technologiesUsed.map(getTechnologyIcon)}</div>
