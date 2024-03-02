@@ -1,10 +1,11 @@
 import React from 'react';
+import './resume.css';
 
 const Resume: React.FC = () => {
   return (
-    <div>
-      <h1>Welcome to my Resume</h1>
-    </div>
+      <div className="resume-holder">
+        <iframe className="pdf-frame" src="https://drive.google.com/file/d/1zj9shp5bOfmfcqH_2FKUf1GOJ8NnYYxS/preview" allow="autoplay"></iframe>
+      </div>
   );
 };
 

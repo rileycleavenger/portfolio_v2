@@ -1,0 +1,14 @@
+.resume-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-frame{
+    border-radius: 10px;
+    background-image: linear-gradient(to right, var(--tertiary-color), var(--primary-color));
+    padding: 20px;
+    width: 31vw;
+    height: 80vh;
+    margin-top: 20px;
+}
