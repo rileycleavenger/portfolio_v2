@@ -147,7 +147,7 @@ const SwProjects: React.FC = () => {
   }
 
   return (
-    <div className="swProjects">
+    <div className="projects">
       {projects.map((project, index) => (
         <ReactCardFlip isFlipped={isFlipped[index] || false} flipDirection="horizontal" key={index}>
           <div title="click to flip" className="card-front" onClick={() => handleClick(index)}>

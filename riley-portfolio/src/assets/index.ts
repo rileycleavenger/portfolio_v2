@@ -5,3 +5,7 @@ export { default as webDriverDockerImage } from './webdriverdocker.png';
 export { default as userspaceFilesystemImage } from './userspacefilesystem.png';
 export { default as goodEatsImage } from './goodeats.png';
 export { default as huffmanTreeEncoderImage } from './huffman.png';
+export { default as esp32CatFeederImage } from './esp32.jpg';
+export { default as neoPixelMatrixImage } from './neopixel.png';
+export { default as raspotifyRfidImage } from './rfidplayer.png';
+export { default as modernJukeboxHwImage } from './modernjukeboxhw.png';
