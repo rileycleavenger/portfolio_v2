@@ -24,16 +24,31 @@ nav{
     font-size: 20px;
 }
 
+.active{
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
 /* mobile */
 .dropdownMenu {
     display: none;
 }
   
-button {
+.menu-button {
+    display: none;
+}
+
+.page-title{
     display: none;
 }
   
   @media (max-width: 768px) {
+    .page-title{
+        display: block;
+        color: var(--light-text-color);
+        font-size: 18px;
+        font-weight: bold;
+    }
     .dropdownMenu {
       display: flex;
       flex-direction: column;
