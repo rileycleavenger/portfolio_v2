@@ -93,3 +93,23 @@
 .card-back{
     justify-content: space-between;
 }
+
+/* mobile */
+@media (max-width: 768px) {
+    .card-front, .card-back {
+        width: 80vw;
+        height: 335px;
+    }
+    .card-front a{
+        font-size: 25px;
+    }
+
+    .tech-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    .description-text{
+        padding-top: 0;
+    }
+}

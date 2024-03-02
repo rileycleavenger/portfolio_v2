@@ -12,3 +12,11 @@
     height: 80vh;
     margin-top: 20px;
 }
+
+/* mobile */
+@media (max-width: 768px) {
+    .pdf-frame{
+        width: 85vw;
+        height: 60vh;
+    }
+}

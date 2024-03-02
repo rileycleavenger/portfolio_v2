@@ -21,10 +21,10 @@ const Navbar: React.FC = () => {
         <FontAwesomeIcon className="menu-button" icon={faBars} onClick={toggleDropdown}/>
         {isOpen && (
         <div className='dropdownContent'>
-          <Link to="/" className='menuLink'>About Me</Link>
-          <Link to="/software" className='menuLink'>Software Projects</Link>
-          <Link to="/hardware" className='menuLink'>Hardware Projects</Link>
-          <Link to="/resume" className='menuLink'>Resume</Link>
+          <Link to="/" onClick={toggleDropdown} className='menuLink'>About Me</Link>
+          <Link to="/software" onClick={toggleDropdown} className='menuLink'>Software Projects</Link>
+          <Link to="/hardware" onClick={toggleDropdown} className='menuLink'>Hardware Projects</Link>
+          <Link to="/resume" onClick={toggleDropdown} className='menuLink'>Resume</Link>
         </div>
         )}
       </div>
