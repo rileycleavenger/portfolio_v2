@@ -5,7 +5,6 @@ import About from './components/about/about';
 import SwProjects from './components/swProjects/swProjects';
 import HwProjects from './components/hwProjects/hwProjects';
 import Resume from './components/resume/resume';
-import ContactMe from './components/contactMe/contactMe';
 import './App.css';
 import './variables.css';
 
@@ -19,7 +18,6 @@ const App: React.FC = () => {
           <Route path="/software" element={<SwProjects />} />
           <Route path="/hardware" element={<HwProjects />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/Contact" element={<ContactMe />} />
         </Routes>
       </div>
     </Router>

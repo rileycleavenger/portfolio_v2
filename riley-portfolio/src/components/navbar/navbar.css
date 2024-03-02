@@ -1,13 +1,14 @@
 nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
     position: fixed;
     width: 100%;
     z-index: 1;
     background-color: var(--primary-color);
     height: 55px;
+    gap: 100px;
 }
 
 .navLink:hover{

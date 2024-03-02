@@ -10,7 +10,6 @@ const Navbar: React.FC = () => {
         <Link to="/hardware" className='navLink'>Hardware Projects</Link>
         <Link to="/software" className='navLink'>Software Projects</Link>
         <Link to="/resume" className='navLink'>Resume</Link>
-        <Link to="/contact" className='navLink'>Contact Me</Link>
     </nav>
   );
 };
