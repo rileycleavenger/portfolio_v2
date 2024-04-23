@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import { Project } from '../../types';
 import '../swProjects/swProjects.css';
-import { raspotifyRfidImage, modernJukeboxHwImage, esp32CatFeederImage, neoPixelMatrixImage } from '../../assets';
-import { FaJsSquare, FaPython, FaReact, FaAngular, FaHtml5, FaCss3Alt, FaGithub, FaJava, FaNodeJs, FaLinkedin } from 'react-icons/fa';
+import { raspotifyRfidImage, modernJukeboxHwImage, esp32CatFeederImage, neoPixelMatrixImage, pong } from '../../assets';
+import { FaJsSquare, FaPython, FaReact, FaAngular, FaHtml5, FaCss3Alt, FaGithub, FaJava, FaNodeJs, FaLinkedin, FaMemory } from 'react-icons/fa';
 import { DiRust, DiVisualstudio, DiLinux } from 'react-icons/di';
 import { SiCplusplus, SiCsharp, SiMysql, SiFlask, SiVercel, SiMicrosoftazure, SiRaspberrypi, SiJirasoftware, SiFirebase, SiJupyter, SiPandas, SiNumpy, SiDocker, SiSelenium , SiGooglecloud, SiC } from 'react-icons/si';
 import { BiLogoTypescript, BiLogoGoLang, BiLogoUnity  } from "react-icons/bi";
@@ -42,6 +42,13 @@ const HwProjects: React.FC = () => {
       description: 'I setup an RP2040 to control a NeoPixel matrix to act as a functioning level. The drivers for the NeoPixel matrix were written in C++ and the level was written in Rust. The level is displayed on the matrix and the RP2040 is used to read the accelerometer and gyroscope data to display the level.',
       link: '',
       technologiesUsed: ['Rust', 'C', 'C++'],
+    },
+    {
+      name: 'System on Chip VGA Pong', 
+      imagePath: pong,
+      description: 'I programmed DE10-Lite board to display a version of Pong on a VGA monitor. The game was programmed purely in VHDL, and utilized basic VGA sync practices as well as bitmaps for visual output. The game itself was just a recreation of classic Pong, but included a score counters and menu screens.',
+      link: 'https://github.com/rileycleavenger/pong',
+      technologiesUsed: ['VHDL'],
     }
   ];
 
@@ -119,7 +126,8 @@ const HwProjects: React.FC = () => {
         return <DiVisualstudio className="tech-icon" onClick={() => window.open('https://code.visualstudio.com/docs', '_blank')} />;
       case 'Jira':
         return <SiJirasoftware className="tech-icon" onClick={() => window.open('https://www.atlassian.com/software/jira/guides', '_blank')} />;
-
+      case 'VHDL':
+        return <FaMemory className='tech-icon' onClick={() => window.open('https://edg.uchicago.edu/~tang/VHDLref.pdf', '_blank')} />;
       default:
         return null;
     }
