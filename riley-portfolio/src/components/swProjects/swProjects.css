@@ -112,4 +112,9 @@
     .description-text{
         padding-top: 0;
     }
+
+    .card-front img{
+        width: 78vw;
+        height: auto;
+    }
 }
