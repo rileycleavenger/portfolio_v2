@@ -22,7 +22,7 @@ const About: React.FC = () => {
         </div>
         <div className="bio">
           <h1>About Me</h1>
-          <p>Hi, I’m Riley. In my spare time I enjoy developing technical solutions that bring my ideas to life. My technical passions include full-stack web development, machine learning, cloud computing, data engineering, and embedded systems. I currently work as a Software Engineer while pursuing a Master of Science in Computer Science at Georgia Tech, where I’m expanding my knowledge in machine learning. With my undergraduate background in computer engineering and experience with big data and cloud platforms like AWS, Google Cloud, and Azure, I enjoy working on projects that merge software engineering with large-scale infrastructure. I’m always down to learn something new, and whether it’s coding, designing, or just building something, I’m passionate about working on projects that make a difference or pique my technical and personal interests.</p>
+          <p>My technical passions include full-stack web development, machine learning, cloud computing, data engineering, and embedded systems. I currently work as a Software Engineer while pursuing a Master of Science in Computer Science at Georgia Tech, where I’m expanding my knowledge in machine learning.</p>
           <div className="socials">
             <a className="social-icon" href="https://www.linkedin.com/in/rileycleavenger/" target="_blank">
               <FaLinkedin />
