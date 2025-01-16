@@ -22,7 +22,7 @@ const About: React.FC = () => {
         </div>
         <div className="bio">
           <h1>About Me</h1>
-          <p>I'm currently a senior Computer Engineering major at the University of Florida looking to pursue a career in Software Engineering. Personally I enjoy working on full stack web development projects, but my enthusiasm extends to the realms of machine learning, artificial intelligence, and embedded systems, where I am keen on exploring innovative solutions and pushing the boundaries of technology.</p>
+          <p>My technical passions include full-stack web development, machine learning, cloud computing, data engineering, and embedded systems. I currently work as a Software Engineer while pursuing a Master of Science in Computer Science at Georgia Tech, where I’m expanding my knowledge in machine learning.</p>
           <div className="socials">
             <a className="social-icon" href="https://www.linkedin.com/in/rileycleavenger/" target="_blank">
               <FaLinkedin />
