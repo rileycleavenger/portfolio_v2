@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import { Project } from '../../types';
 import './swProjects.css';
-import { gatorPathTrackerImage, mealDealzImage, modernJukeboxImage, huffmanTreeEncoderImage, goodEatsImage, webDriverDockerImage, userspaceFilesystemImage } from '../../assets';
+import { gatorPathTrackerImage, mealDealzImage, modernJukeboxImage, huffmanTreeEncoderImage, goodEatsImage, webDriverDockerImage, userspaceFilesystemImage, siliconStudioImage } from '../../assets';
 import { FaJsSquare, FaPython, FaReact, FaAngular, FaHtml5, FaCss3Alt, FaGithub, FaJava, FaNodeJs, FaLinkedin } from 'react-icons/fa';
 import { DiRust, DiVisualstudio, DiLinux } from 'react-icons/di';
-import { SiCplusplus, SiCsharp, SiMysql, SiFlask, SiVercel, SiMicrosoftazure, SiRaspberrypi, SiJirasoftware, SiFirebase, SiJupyter, SiPandas, SiNumpy, SiDocker, SiSelenium , SiGooglecloud, SiC } from 'react-icons/si';
-import { BiLogoTypescript, BiLogoGoLang, BiLogoUnity  } from "react-icons/bi";
+import { SiCplusplus, SiCsharp, SiMysql, SiFlask, SiVercel, SiMicrosoftazure, SiRaspberrypi, SiJirasoftware, SiFirebase, SiJupyter, SiPandas, SiNumpy, SiDocker, SiSelenium, SiGooglecloud, SiC, SiElectron } from 'react-icons/si';
+import { BiLogoTypescript, BiLogoGoLang, BiLogoUnity } from "react-icons/bi";
 import { IoHardwareChipSharp } from "react-icons/io5";
 import { GiProcessor } from "react-icons/gi";
 
@@ -15,6 +15,13 @@ const SwProjects: React.FC = () => {
 
   // const with all projects
   const projects: Project[] = [
+    {
+      name: 'Silicon Studio',
+      imagePath: siliconStudioImage,
+      description: 'The all-in-one local AI workbench for Apple Silicon. Built on top of Apple\'s MLX framework, it provides a unified interface for data preparation, model management, fine-tuning, and evaluation. It handles local LLM fine-tuning (LoRA/QLoRA) and inference directly on your Mac, featuring a native GUI, privacy-focused data prep with PII stripping, and integrated chat for testing adapters.',
+      link: 'https://github.com/rileycleavenger/Silicon-Studio',
+      technologiesUsed: ['Electron', 'React', 'TypeScript', 'Python', 'C++'],
+    },
     {
       name: 'Gator Path Tracker',
       imagePath: gatorPathTrackerImage,
@@ -46,7 +53,7 @@ const SwProjects: React.FC = () => {
     {
       name: 'Userspace Filesystem',
       imagePath: userspaceFilesystemImage,
-      description:  'For this project I developed a library to read and write to WAD files, then implement a userspace daemon, then test it by mounting and unmounting directories. For the libWad library I implemented several functions with the purpose of being able to treat a WAD file as an actual file directory system. I implemented three basic data structures to keep track of the files in the Wad file, a n-ary tree, a map to keep track of each node\'s filepath, then a map to keep track of folder end nodes.',
+      description: 'For this project I developed a library to read and write to WAD files, then implement a userspace daemon, then test it by mounting and unmounting directories. For the libWad library I implemented several functions with the purpose of being able to treat a WAD file as an actual file directory system. I implemented three basic data structures to keep track of the files in the Wad file, a n-ary tree, a map to keep track of each node\'s filepath, then a map to keep track of folder end nodes.',
       link: '',
       technologiesUsed: ['C++', 'C', 'Linux'],
     },
@@ -140,6 +147,8 @@ const SwProjects: React.FC = () => {
         return <DiVisualstudio className="tech-icon" onClick={() => window.open('https://code.visualstudio.com/docs', '_blank')} />;
       case 'Jira':
         return <SiJirasoftware className="tech-icon" onClick={() => window.open('https://www.atlassian.com/software/jira/guides', '_blank')} />;
+      case 'Electron':
+        return <SiElectron className="tech-icon" onClick={() => window.open('https://www.electronjs.org/', '_blank')} />;
       // Add more cases as needed
       default:
         return null;
