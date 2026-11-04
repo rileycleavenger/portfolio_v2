@@ -1,91 +1,42 @@
-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    background-color: var(--primary-color);
-    height: 55px;
-    gap: 100px;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
 }
 
-.navLink:hover{
-    transform: translateY(-5px);
-
+.site-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 5vw, 48px);
+  /* The header's 1px border completes --header-height. */
+  height: calc(var(--header-height) - 1px);
+  padding: 0 var(--gutter);
 }
 
-.navLink {
-    color: var(--light-text-color);
-    text-decoration: none;
-    padding: 10px;
-    transition: transform 0.3s ease;
-    font-size: 20px;
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 0;
+  font-size: 15px;
+  color: var(--ink-2);
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.active{
-    font-weight: bold;
-    transition: transform 0.3s ease;
+.nav-link:hover {
+  color: var(--ink);
 }
 
-/* mobile */
-.dropdownMenu {
-    display: none;
-}
-  
-.menu-button {
-    display: none;
+.nav-link.is-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
-.page-title{
-    display: none;
+.nav-link svg {
+  width: 14px;
+  height: 14px;
 }
-  
-  @media (max-width: 768px) {
-    .page-title{
-        display: block;
-        color: var(--light-text-color);
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .dropdownMenu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: var(--primary-color);
-      width: 100%;
-      gap: 10px;
-      padding: 10px;
-    }
-    .dropdownMenu a{
-        color: var(--light-text-color);
-        text-decoration: none;
-    }
-    .dropdownContent {
-      display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-top: 100px;
-    }
-  
-    .menu-button {
-      display: block;
-      background: none;
-      border: none;
-      color: var(--light-text-color);
-      position: absolute;
-        top: 10px;
-        left: 10px;
-    }
-  
-    .navLink {
-      display: none;
-    }
-
-    nav{
-        flex-direction: column;
-        height: 35px;
-    }
-  }
