@@ -1,0 +1,123 @@
+/* claude-squad has no screenshot, so it gets this live-text terminal. Always dark, like a real terminal.
+   Sizes use container units so it scales with whatever box it sits in. */
+.terminal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 3.2cqi 3.6cqi;
+  background: #121211;
+  color: #d9d6d0;
+  font-family: var(--mono);
+  font-size: clamp(7px, 1.95cqi, 12.5px);
+  line-height: 1.55;
+  text-align: left;
+}
+
+.terminal-title {
+  color: #8d8982;
+}
+
+.terminal-tabs {
+  display: flex;
+  gap: 2.4cqi;
+  margin-top: 0.6em;
+  white-space: nowrap;
+  color: #8d8982;
+}
+
+.terminal-tabs .is-active {
+  color: #121211;
+  background: #d9d6d0;
+  padding: 0 0.5em;
+  margin-left: -0.5em;
+}
+
+.terminal-tabs i {
+  font-style: normal;
+}
+
+.terminal-tabs i.is-working {
+  color: #7ccf8c;
+}
+
+.terminal-log {
+  flex: 1;
+  margin-top: 0.8em;
+  padding: 0.7em 0.9em;
+  border: 1px solid #34322f;
+  border-radius: 0.6em;
+}
+
+.terminal-log li {
+  display: grid;
+  grid-template-columns: 5.5ch 9.5ch minmax(0, 1fr);
+  gap: 1ch;
+}
+
+.terminal-log li + li {
+  margin-top: 0.3em;
+}
+
+.terminal-time {
+  color: #6f6b65;
+}
+
+.from-architect {
+  color: #f0a875;
+}
+
+.from-engineer {
+  color: #8fb8f0;
+}
+
+.from-product {
+  color: #c9a6ec;
+}
+
+.terminal-tool {
+  color: #8d8982;
+}
+
+.terminal-input {
+  margin-top: 0.8em;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  vertical-align: text-bottom;
+  background: #d9d6d0;
+  animation: terminal-blink 1.1s steps(1) infinite;
+}
+
+.terminal-status {
+  display: flex;
+  gap: 2ch;
+  margin-top: 0.4em;
+  white-space: nowrap;
+  color: #8d8982;
+}
+
+.terminal-cost {
+  margin-left: auto;
+}
+
+@keyframes terminal-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* In small boxes the text can't shrink further, so drop the lines that would overflow. */
+@container (max-width: 440px) {
+  .terminal-status {
+    display: none;
+  }
+}
+
+@container (max-width: 400px) {
+  .terminal-title {
+    display: none;
+  }
+}
