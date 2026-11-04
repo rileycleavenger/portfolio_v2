@@ -90,3 +90,9 @@ test('old page URLs land on the projects page', () => {
   renderAt('/hardware');
   expect(window.location.pathname).toBe('/projects');
 });
+
+test('the resume is hidden while it is being updated', () => {
+  renderAt('/resume');
+  expect(window.location.pathname).toBe('/');
+  expect(screen.queryByRole('link', { name: /resume/i })).toBeNull();
+});

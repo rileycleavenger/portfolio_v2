@@ -8,21 +8,12 @@ import Navbar from './components/navbar/navbar';
 import About from './components/about/about';
 import Projects from './components/projects/projects';
 import Experience from './components/experience/experience';
-import { RESUME_URL } from './data/links';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  return null;
-};
-
-// /resume used to be a page; send old links straight to the PDF.
-const ResumeRedirect: React.FC = () => {
-  useEffect(() => {
-    window.location.replace(RESUME_URL);
-  }, []);
   return null;
 };
 
@@ -35,7 +26,6 @@ const App: React.FC = () => {
         <Route path="/" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
-        <Route path="/resume" element={<ResumeRedirect />} />
         {/* Old page URLs */}
         <Route path="/software" element={<Navigate to="/projects" replace />} />
         <Route path="/hardware" element={<Navigate to="/projects" replace />} />

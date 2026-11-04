@@ -1,7 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FiArrowUpRight } from 'react-icons/fi';
-import { RESUME_URL } from '../../data/links';
 import './navbar.css';
 
 const pages = [
@@ -23,10 +21,6 @@ const Navbar: React.FC = () => (
           {page.label}
         </NavLink>
       ))}
-      <a className="nav-link" href={RESUME_URL} target="_blank" rel="noreferrer">
-        Resume
-        <FiArrowUpRight aria-hidden />
-      </a>
     </nav>
   </header>
 );
