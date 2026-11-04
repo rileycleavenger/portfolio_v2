@@ -2,6 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import App from './App';
 import { certifications, experience } from './data/experience';
+import { RESUME_URL } from './data/links';
 import { projects } from './data/projects';
 
 // CRA's Jest predates package "exports" maps, so it can't resolve this subpath.
@@ -91,8 +92,23 @@ test('old page URLs land on the projects page', () => {
   expect(window.location.pathname).toBe('/projects');
 });
 
-test('the resume is hidden while it is being updated', () => {
-  renderAt('/resume');
-  expect(window.location.pathname).toBe('/');
-  expect(screen.queryByRole('link', { name: /resume/i })).toBeNull();
+test('the nav links to the resume PDF in a new tab', () => {
+  renderAt('/');
+  const link = screen.getByRole('link', { name: /resume/i });
+  expect(link).toHaveAttribute('href', RESUME_URL);
+  expect(link).toHaveAttribute('target', '_blank');
+});
+
+test('/resume redirects to the resume PDF', () => {
+  // jsdom can't navigate, so stand in for location.replace.
+  const replace = jest.fn();
+  const original = window.location;
+  Object.defineProperty(window, 'location', { configurable: true, value: { ...original, pathname: '/resume', replace } });
+  try {
+    window.history.pushState({}, '', '/resume');
+    render(<App />);
+    expect(replace).toHaveBeenCalledWith(RESUME_URL);
+  } finally {
+    Object.defineProperty(window, 'location', { configurable: true, value: original });
+  }
 });
